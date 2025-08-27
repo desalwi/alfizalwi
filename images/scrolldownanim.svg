@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 79">
+<rect width="24" height="24" fill="white"/>
+<path id="Vector" d="M18.8555 8.86084L12 15.1397L5.14458 8.86084" stroke="#A01D22">
+                                    <animate attributeName="d" values="M18.8555 8.86084L12 15.1397L5.14458 8.86084;M18.8555 15.9663L12 22.2452L5.14458 15.9663" begin="0s" dur="1s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;1"/>
+                                    <animate attributeName="opacity" values="1;0.01" begin="0s" dur="1s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;1"/></path>
+<path id="Vector_2" opacity="0.01" d="M18.8555 2.18262L12 8.4615L5.14458 2.18262" stroke="#A01D22">
+                                    <animate attributeName="opacity" values="0.01;1" begin="0s" dur="1s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;1"/>
+                                    <animate attributeName="d" values="M18.8555 2.18262L12 8.4615L5.14458 2.18262;M18.8555 8.86035L12 15.1392L5.14458 8.86035" begin="0s" dur="1s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;1"/></path>
+
+                                    </g>
+</svg>

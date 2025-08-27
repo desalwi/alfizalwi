@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name to Link Converter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { margin: 5px; padding: 8px; }
+    table { margin-top: 20px; border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    button.copy { padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h2>Name to Link Converter</h2>
+  
+  <form id="converterForm">
+    <input type="url" id="linkInput" placeholder="Enter base link" required>
+    <input type="text" id="nameInput" placeholder="Enter name" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Original Name</th>
+        <th>Generated Link</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('converterForm');
+    const tableBody = document.querySelector('#resultTable tbody');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const baseLink = document.getElementById('linkInput').value.trim();
+      const name = document.getElementById('nameInput').value.trim();
+      
+      if (!baseLink || !name) return;
+
+      const encodedName = encodeURIComponent(name);
+
+      // If base link already has ?, append with &
+      const finalLink = baseLink.includes('?') 
+                        ? `${baseLink}&name=${encodedName}`
+                        : `${baseLink}?name=${encodedName}`;
+
+      // Create new row
+      const row = document.createElement('tr');
+
+      row.innerHTML = `
+        <td>${name}</td>
+        <td><a href="${finalLink}" target="_blank">${finalLink}</a></td>
+        <td><button class="copy">Copy</button></td>
+      `;
+
+      // Add copy functionality
+      row.querySelector('.copy').addEventListener('click', () => {
+        navigator.clipboard.writeText(finalLink).then(() => {
+          alert('Link copied to clipboard!');
+        });
+      });
+
+      tableBody.appendChild(row);
+
+      // Clear inputs
+      document.getElementById('nameInput').value = '';
+    });
+  </script>
+</body>
+</html>
