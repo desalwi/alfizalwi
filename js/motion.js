@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 start: 'top 100%',
                 end: 'top 5%',
                 // toggleActions: "play none none reset",
-                toggleActions: "play none reverse none",
+                toggleActions: "play none none none",
                 //              restart play pause resume reverse reset complete(jump to finish) none 
                 //              onEnter onLeave onEnterBack onLeaveBack
                 // scrub: 2,
@@ -658,7 +658,7 @@ gsap.to("#start", {
 
   ScrollTrigger.create({
     trigger: ".wedbgwrap",
-    start: "top 30%",
+    start: "top 25%",
     end: "bottom 80%",
     // end: () => "+=" + (window.innerHeight * 2), // 3 sections
     pin: ".wedbgcontent",
@@ -670,7 +670,7 @@ gsap.to("#start", {
     //   fontSize: "14px",
     //   fontWeight: "bold"
     // }
-    // markers: true
+    markers: true
   });
   
   // ScrollTrigger.create({
@@ -719,9 +719,9 @@ gsap.to("#start", {
     x: 0,
     scrollTrigger: {
       trigger: ".timeplace",
-      start: "top 50%",
+      start: "top 45%",
       endTrigger: ".date",
-      end: "center 80%",
+      end: "top 30%",
       // markers: true,
       scrub: 2,
       duration: 2,
@@ -749,7 +749,7 @@ cards.forEach((card, i) => {
     trigger: card,
     start: "top 17%",
     endTrigger: ".timeplace_container",   // parent container
-    end: "bottom 50%",
+    end: "bottom 70%",
     pin: true,
     pinSpacing: false, // so they overlap into a stack
     // markers: true,

@@ -589,7 +589,7 @@ body {
   align-items: center;
   padding: 1rem;
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/5;
 }
 .timeplace_card_item p {
   font-family: "JetBrains Mono", monospace !important;
@@ -635,8 +635,8 @@ body {
 }
 
 .peta {
+  flex-grow: 1;
   padding-top: 2rem;
-  height: 100%;
 }
 .peta_address {
   font-family: "Instrument Serif", serif !important;
@@ -646,7 +646,6 @@ body {
   text-align: center;
   padding: 0 2rem;
   line-height: 1.25;
-  height: 100%;
 }
 
 .mt_stack_1 {
