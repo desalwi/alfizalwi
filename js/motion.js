@@ -670,7 +670,7 @@ gsap.to("#start", {
     //   fontSize: "14px",
     //   fontWeight: "bold"
     // }
-    markers: true
+    // markers: true
   });
   
   // ScrollTrigger.create({
@@ -912,7 +912,7 @@ cards.forEach((card, i) => {
 gsap.to(".petalone", {
   y: () => window.innerHeight * 1, // small movement = slower
   ease: "none",
-  rotate: -90,
+  rotate: -180,
   scrollTrigger: {
     trigger: ".adab",
     start: "top bottom",   // when .adab enters viewport
@@ -923,7 +923,7 @@ gsap.to(".petalone", {
 gsap.to(".petaltwo", {
   y: () => window.innerHeight * .01, // small movement = slower
   ease: "none",
-  rotate: 90,
+  rotate: 180,
   scrollTrigger: {
     trigger: ".adab",
     start: "top bottom",   // when .adab enters viewport
