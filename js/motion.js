@@ -535,7 +535,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 start: 'top 100%',
                 end: 'top 5%',
                 // toggleActions: "play none none reset",
-                toggleActions: "play none reverse none",
+                toggleActions: "play none none none",
+                // toggleActions: "play none reverse none",
                 //              restart play pause resume reverse reset complete(jump to finish) none 
                 //              onEnter onLeave onEnterBack onLeaveBack
                 // scrub: 2,
@@ -599,7 +600,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 start: 'top 80%',
                 end: 'top 5%',
                 // toggleActions: "play none none reset",
-                toggleActions: "play none reverse none",
+                toggleActions: "play none none none",
+                // toggleActions: "play none reverse none",
                 //              restart play pause resume reverse reset complete(jump to finish) none 
                 //              onEnter onLeave onEnterBack onLeaveBack
                 scrub: 1,
