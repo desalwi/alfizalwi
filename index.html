@@ -38,6 +38,11 @@
 </head>
 <body>
 
+    <!-- preloader -->
+    <div id="preloader">
+        <img src="images/preload.gif" alt="Loading...">
+    </div>
+
     <!-- <div class="smooth_wrapper">
     <div class="smooth_content"> -->
 
@@ -448,6 +453,20 @@
         } else {
           document.getElementById('namayangdiundang').textContent = 'Yang terhormat';
         }
+
+        // Wait until page fully loads
+        const preloader = document.getElementById("preloader");
+        const start = Date.now();
+
+        window.addEventListener("load", () => {
+        const elapsed = Date.now() - start;
+        const minDuration = 1000; // 1 second
+        const remaining = Math.max(0, minDuration - elapsed);
+
+        setTimeout(() => {
+            preloader.classList.add("hide");
+        }, remaining);
+        });
     </script>
 
 </body>
